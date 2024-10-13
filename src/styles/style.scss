@@ -1,0 +1,39 @@
+$black-color: #242424;
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 15px 0;
+    >div{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        max-height: 32px;
+        &:nth-child(1){
+            justify-content: start;
+        }
+        &:nth-child(2){
+            justify-content: end;
+        }
+    }
+    img{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+    &-username{
+        display: flex;
+        align-items: center;
+        width: max-content;
+        font-size: 1.625rem;
+        font-weight: 700;
+        color: $black-color;
+        padding-bottom: 1px;
+        text-transform: capitalize;
+    }
+    &-bot{
+        margin-top: 3px;
+    }
+}
