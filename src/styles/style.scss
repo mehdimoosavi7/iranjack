@@ -1,39 +1,76 @@
 $black-color: #242424;
+$purple-color: #5b5fc7;
 
-.header{
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/FontsFree-Net-SFProDisplay-Regular.ttf") format("ttf"),
+    url("../fonts/SF-Pro-Display-Semibold.woff") format("woff"),
+    url("../fonts/sf-pro-display-medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "SF Pro Display";
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 15px 0;
+  > div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 10px;
+    max-height: 32px;
+    &:nth-child(1) {
+      justify-content: start;
+    }
+    &:nth-child(2) {
+      justify-content: end;
+    }
+  }
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  &-username {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: $black-color;
+    padding-bottom: 1px;
+    text-transform: capitalize;
+  }
+  &-bot {
+    margin-top: 3px;
+  }
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  margin-top: 5px;
+  > .tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 15px 15px 0;
-    >div{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        max-height: 32px;
-        &:nth-child(1){
-            justify-content: start;
-        }
-        &:nth-child(2){
-            justify-content: end;
-        }
+    height: 45px;
+    font-size: 15px;
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+    &.active {
+      border-color: $purple-color;
+      font-weight: 600;
     }
-    img{
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-    }
-    &-username{
-        display: flex;
-        align-items: center;
-        width: max-content;
-        font-size: 1.625rem;
-        font-weight: 700;
-        color: $black-color;
-        padding-bottom: 1px;
-        text-transform: capitalize;
-    }
-    &-bot{
-        margin-top: 3px;
-    }
+  }
 }
