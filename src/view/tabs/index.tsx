@@ -8,6 +8,7 @@ const Tabs = () => {
       {tabs?.map((tab, index) => {
         return (
           <span
+            key={index}
             className={`tab ${index === activeTab && "active"}`}
             onClick={() => setActiveTab(index)}
           >
